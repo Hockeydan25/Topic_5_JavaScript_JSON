@@ -1,9 +1,9 @@
 let text = 'The classes are itec 1150, itec 1250, and itec 2560. '
 
 let replaced = text.replace('itec', 'ITEC') //replaces only the first itec.
-console.log(replaced)
+console.log(replaced)                       //console log is used to show/reads our code output.
 
-let replacedAll = text.replace(/itec/g, 'ITEC') //replaces ALL itec.
+let replacedAll = text.replace(/itec/g, 'ITEC') //replaces ALL itec to CAPS.
 console.log(replacedAll)
 
 let message = 'The class numbers are 1150,1250, and 2560. '
