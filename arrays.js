@@ -56,8 +56,8 @@ animals.forEach( function(animal){
 })
 //another looop over the array Use a loop with animals array.
 //print/read counts the length of each animal name.  
-animals.forEach(function(animalLetters){
-    console.log((animal.lengthLatters))
+animals.forEach(function(animal){
+    console.log((animal.length))
 
 })
 
@@ -65,10 +65,12 @@ animals.forEach(function(animalLetters){
 //my list [ 'bear', 'cheetah', 'deer', 'giraffe', 'zerbra' ],[ 4, 7, 4, 7, 6 ]
 // Create new array.
 
-let animals.forEach(function(animalLetters){
-    console.log((animal.lengthLatters))
+animals.push('alligator') //adding new animal to check we can add animals to the list
 
+let animalInts = [] //new array container for animal length read.
+console.log(animalInts)// checking array is empty here.
+animals.forEach( function(animal){  //loop and function creation named animal to check array animals.  
+    let length = animal.length //length of each in animals is checked, variable legnth created.
+    animalInts.push(length) //push function variable length is going to add those numerber one at a time each loop
 })
-
-
-
+console.log(animalInts) //reads our code dispalyed in termial with node arrays.js command. 
