@@ -3,8 +3,8 @@ let user = { username: 'Dan', password: 'kitty' } //object with two properties u
 
 console.log(user.username)//Dan. this is recommended version simple 
 console.log(user['username'])//Dan , property need to be a string here, using array to look at the username.
-console.log(user.password)//Dan
-console.log(user['password'])//Dan
+console.log(user.password)//kitty
+console.log(user['password'])//kitty
 
 let whatProperty = 'password' //using a variable to cast the into useable read/output. 
 console.log(user[whatProperty]) 

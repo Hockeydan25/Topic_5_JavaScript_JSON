@@ -10,7 +10,7 @@ console.log(dreamJob) //read dream job
 dreamJob.salary = 50000
 console.log(dreamJob)
 
-dreamJob.roles.push("server-admin")//method adds to the "end" of anarray
+dreamJob.roles.push("server-admin")//method adds to the "end" of an array.
 console.log(dreamJob)
 
 dreamJob.contact.location = 'East Minneapolis'
