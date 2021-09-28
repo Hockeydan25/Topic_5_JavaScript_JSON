@@ -47,6 +47,15 @@ console.log(rates) // new property added { AUD: 1.5417, BGN: 1.9558, BRL: 3.8959
 //      the equivalent value in Australian Dollars (AUD)
 
 //let exchange = 100
+// function f_to_c(f, deciamalPlaces){   // new function f_to_c.
+//   let celsius = (f-32) * 5 / 9 // using a calculation with function value f. 
+//   if (deciamalPlaces){ //undefined values are considered false or falsy.
+//       return celsius.toFixed(deciamalPlaces)
+//   } else {
+//       return celsius
+//   }
+  
+// }
 
 // TODO write code to identify the currency symbol that has the highest exchange rate compared to Euros.
 //    In other words, identify the property with the largest value. the answer is BRL (Brazilian Real) 
@@ -75,6 +84,10 @@ console.log(cats_and_owners)
 
 // TODO write a loop to print each cat owner, and their cat's name, one per line. Use the forEach style.
 
+cats_and_owners.forEach(function(cats_and_owners){
+  console.log((cats_and_owners))
+  
+})
 
 
 
