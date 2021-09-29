@@ -23,13 +23,10 @@ console.log(iss_location.iss_position.latitude)
 // TODO Extract the longitude value, and log it to the console.
 console.log(iss_location.iss_position.longitude)
 
-
-
 /* b. Use this JavaScript object of exchange rates relative to Euros.
 The properties are currency symbols, the values are the exchange rates.
 Data source: http://fixer.io/
 * */
-
 
 let rates = {
     "AUD": 1.5417,
@@ -37,7 +34,7 @@ let rates = {
     "BRL": 3.8959,
     "CAD": 1.5194
 }
-
+console.log(rates)
 // TODO write code to add a new property for Swiss Francs. Symbol is CHF, value is 1.1787.
 
 rates.CHF = 1.1787
@@ -46,22 +43,26 @@ console.log(rates) // new property added { AUD: 1.5417, BGN: 1.9558, BRL: 3.8959
 // TODO if you had 100 Euros, write code to get the exchange rate from the object, then calculate 
 //      the equivalent value in Australian Dollars (AUD)
 
-//let exchange = 100
-// function f_to_c(f, deciamalPlaces){   // new function f_to_c.
-//   let celsius = (f-32) * 5 / 9 // using a calculation with function value f. 
-//   if (deciamalPlaces){ //undefined values are considered false or falsy.
-//       return celsius.toFixed(deciamalPlaces)
-//   } else {
-//       return celsius
-//   }
-  
-// }
+rates.EUR = 0.86
+console.log(rates)
 
+let exchange = myFunction(.86, 1.5417, 100);   // Function is called, return value will end up in exchange
+
+function myFunction(a, b, c) {
+  sum = a * b * c
+  return sum //.tofixed(sum, 4);trying to get decimal place shorter// Function returns the product of a and b
+}
+console.log(exchange)
+ 
 // TODO write code to identify the currency symbol that has the highest exchange rate compared to Euros.
 //    In other words, identify the property with the largest value. the answer is BRL (Brazilian Real) 
 // at 3.8959 BRL to 1 Euro.
-
-//console.log(rates >= )
+function largestValue(x, y) {
+  if (y === undefined) {
+    y = "largest value";
+  }
+}
+console.log(largestValue) // (rate >=)
 
 
 
@@ -74,6 +75,7 @@ let cats_and_owners = [
   { name: "Katy Perry", cat: "Kitty Purry" },
   { name: "Snoop Dogg", cat: "Miles Davis" }
 ]
+
 
 // TODO print Gary Oldman's cat's name
 console.log(cats_and_owners[1])
