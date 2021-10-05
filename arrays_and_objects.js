@@ -251,10 +251,13 @@ console.log(catCount)
 //   have a good look at how the JSON is structured, and think about what loop(s) you'll need to write.
 let LaureateCount = nobel_prize_winners_2017.prizes
 console.log(LaureateCount)
+
+let laureatesTotal = 0
 LaureateCount.forEach( function(LaureateCount){
    console.log((LaureateCount.laureates.length))
-  //  for (let i =0; i < laureates.length; i++){
-  //  console.log(LaureateCount)
-  // }  
+    laureatesTotal = laureatesTotal + LaureateCount.laureates.length
 })
+  console.log(laureatesTotal)
 
+
+ 
