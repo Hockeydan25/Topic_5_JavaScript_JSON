@@ -1,6 +1,6 @@
 //Pre-requisites for Android programming = C# or Java.
 
-let takenCSharp = false
+let takenCSharp = false  // change true false to check. 
 let takenJava = false
 
 if (takenCSharp || takenJava){
@@ -29,7 +29,7 @@ if ( age >= 35 && usCitizenTime >= 9 && stateOfResidence === stateWantToRepresen
 } 
 // truthy. or falsy values -undefined, null, empty lists, empty objects, 0 and false.
 //best practice to use triple === unless you want type coresion to happen string value comparison to a number.
-if([] == 0) {
+if([] === 0) {   //testing not the same. '' undefined {}. 
     console.log('the same!') //truthy
 } else{
     console.log('not the same!') //fasly

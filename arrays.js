@@ -61,7 +61,7 @@ animals.forEach(function(animal){
 
 })
 
-//makre a new array with lengths of each animal name.
+//make a new array with lengths of each animal name.
 //my list [ 'bear', 'cheetah', 'deer', 'giraffe', 'zerbra' ],[ 4, 7, 4, 7, 6 ]
 // Create new array.
 

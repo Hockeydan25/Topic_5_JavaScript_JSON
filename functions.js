@@ -14,8 +14,8 @@ console.log(message) // used to display message in Terminal - it works now get t
 // alternative
 function f_to_c(f, deciamalPlaces){   // new function f_to_c.
     let celsius = (f-32) * 5 / 9 // using a calculation with function value f. 
-    if (deciamalPlaces){ //undefined values are considered false or falsy.
-        return celsius.toFixed(deciamalPlaces)
+    if (deciamalPlaces){ //undefined values are considered false or falsy, decimal places not defined here
+        return celsius.toFixed(deciamalPlaces) 
     } else {
         return celsius
     }

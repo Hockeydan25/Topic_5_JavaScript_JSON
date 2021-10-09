@@ -1,9 +1,9 @@
 console.log('hello World!')
 
 //Three ways to write creat variables
-let color = 'blue'
-var size = 'medium' //scope is not recommended scope is much wider
-const language = 'Javascript' //can't change this value
+let color = 'blue' //let is our choice variables
+var size = 'medium' //var is not recommended scope is much wider.
+const language = 'Javascript' //can't change this value or a final value.
 
 
 let quantity = 6
@@ -21,7 +21,7 @@ let todayTemp = 75
 console.log('Today\'s temperature is '+ todayTemp + 'F')
 
 let tempC = (todayTemp -32) * 5 / 9
-//console.log('Today\'s temperature is ' + tempC.toFixed(2)+ 'C')
+//console.log('Today\'s temperature is ' + tempC.toFixed(2)+ 'C') (2) here is decimal places.
 console.log(`Today\'s temperature is ${tempC.toFixed(2)}C which is equivalant ${todayTemp}`)
 
 

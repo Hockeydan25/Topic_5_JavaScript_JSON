@@ -35,7 +35,7 @@ function gpaRange(gpa){          // function to check grade gpa falls in with ra
 
 
 // can be placed as a string as well comparasion
-console.log(isMinnesotaZip(55417)) // call to function and argument value home zip.t
+console.log(isMinnesotaZip(55417)) // call to function and argument value home zip.
 console.log(isMinnesotaZip(55403)) // testing different numbers.t
 console.log(isMinnesotaZip(56763)) // testing different numbers.t
 console.log(isMinnesotaZip(999999)) // testing different numbers.f

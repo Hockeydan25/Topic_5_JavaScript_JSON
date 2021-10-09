@@ -34,7 +34,7 @@
     <!-- All orders must be for Minnesota, so this input is not editable -->
     <label for="state">State</label><input id="state" name="state" value="Minnesota" disabled> 
     <br>
-    <label for="zipcode">Zip Code</label><input id="zipcode" name="zipcode">
+    <label for="zipcode">Zip Code</label><input id="zipcode" name="zipcode" type="number">
     <br>
 
     <label for="tree-type">Tree Type</label>
@@ -47,7 +47,7 @@
     <br>
 
     <button id="submit-order">Submit Order</button>    
-
+    
     <h2>Order Summary</h2>
 
     <p id="order-summary">
@@ -55,20 +55,15 @@
             if all the required information is entered  -->
     </p>
     
-
-
 <script>
-
+    //variable input elements for the orderForm.
     let homeownerNameInput = document.querySelector('#homeowner-name')
     let homeownerHouseNumberInput = document.querySelector('#homeowner-house-number')
     let homeownerStreetNameInput = document.querySelector('#homeowner-street-name')
+    let homeOwnerCityInput = document.querySelector('#city')// TODO create a variable for city input element
+    let homeOwnerZipInput = document.querySelector('#zipcode') // TODO create a variable for zip code input element
     let treeTypeSelect = document.querySelector('#tree-type')
-
-    // TODO create a variable for city input element
-    // TODO create a variable for zip code input element
-    
     let submitButton = document.querySelector('#submit-order')
-
     let orderSummaryParagraph = document.querySelector('#order-summary')
 
     submitButton.addEventListener('click', function() {
@@ -76,34 +71,46 @@
         let name = homeownerNameInput.value 
         let houseNumber = homeownerHouseNumberInput.value
         let streetName = homeownerStreetNameInput.value
+        let city = homeOwnerCityInput.value  // TODO get the value from the input#city
+        let zipCode = homeOwnerZipInput.value // TODO get the value from the input#zipcode
         let treeType = treeTypeSelect.value
-
-        // TODO get the value from the input#city
-        
-        // TODO get the value from the input#zipcode
-
         // TODO Validate that all six input and select elements have been completed
-
         // TODO Validate the zipcode is in the range 55001 and 56763. This will check that the zip code is in Minnesota.
-
-        let errors = []
-        
         // If a form element has not been completed, add an error message to the errors array (use push)
+        let errors = []
 
-        
+        if(!name){errors.push('Please Enter the Home owners name here')}
+        if(!houseNumber){errors.push('Please enter the House Number here')}
+        if(!streetName){errors.push('Enter the Home owners Street name here')}
+        if(!city){errors.push('Enter the Home owners City here')}
+        if(!zipCode  || zipCode <= 55001 || zipCode >= 56763 ){
+        errors.push('Enter valaid zip code,range 55001 and 56763.')}
+        if(!treeType){errors.push('Select tree type you want to order')}
+
         // TODO - If there are any errors after checking all of the elements, 
         // display an alert with all of the error messages (use join)
         // and then return from this function to prevent further processing 
-
+        if(errors.legnth >0 ) {
+           let errorMsg = errors.join('/n') 
+           alert(errorMsg)                      
+           return
+        } 
+        // homeownerNameInput.value = ''
+        // homeownerHouseNumberInput.value = ''
+        // homeownerStreetNameInput = ''
+        // homeOwnerZipInput.value = ''
+        // homeOwnerCityInput.value = ''
 
         // TODO - If there are no errors, use a template string to display an order summary in the order summary paragraph
-
+        let summary = `Your ${treeType} tree ordered is now placed placed for: 
+        ${name} Address: ${houseNumber} ${streetName}. 'Thank You for using Dan's Tree Order Form Service!'`
+        orderSummaryParagraph.innerHTML = summary
         
     })
 
 
-
+// end of the script body
 </script>
-
+<!-- end of HTML frame body -->
 </body>
 </html
