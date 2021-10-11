@@ -56,7 +56,7 @@
     </p>
     
 <script>
-    //variable input elements for the orderForm.
+    //variable input elements for the orderForm. USING THE HTML and storing them for use.
     let homeownerNameInput = document.querySelector('#homeowner-name')
     let homeownerHouseNumberInput = document.querySelector('#homeowner-house-number')
     let homeownerStreetNameInput = document.querySelector('#homeowner-street-name')
@@ -67,7 +67,7 @@
     let orderSummaryParagraph = document.querySelector('#order-summary')
 
     submitButton.addEventListener('click', function() {
-
+        //setting variables here less typing down the line shorter smart links to input. 
         let name = homeownerNameInput.value 
         let houseNumber = homeownerHouseNumberInput.value
         let streetName = homeownerStreetNameInput.value
@@ -78,34 +78,36 @@
         // TODO Validate the zipcode is in the range 55001 and 56763. This will check that the zip code is in Minnesota.
         // If a form element has not been completed, add an error message to the errors array (use push)
         let errors = []
-
-        if(!name){errors.push('Please Enter the Home owners name here')}
+        //USING THE FUNCTION PUSH TO ENTER IN THE MESSAGE WHERE VALIDATION HAPPENED.
+        if(!name){errors.push('Please Enter the Home owners name here')} 
         if(!houseNumber){errors.push('Please enter the House Number here')}
         if(!streetName){errors.push('Enter the Home owners Street name here')}
         if(!city){errors.push('Enter the Home owners City here')}
-        if(!zipCode  || zipCode <= 55001 || zipCode >= 56763 ){
+        if(!zipCode  || zipCode < 55001 || zipCode > 56763 ){
         errors.push('Enter valaid zip code,range 55001 and 56763.')}
         if(!treeType){errors.push('Select tree type you want to order')}
 
         // TODO - If there are any errors after checking all of the elements, 
         // display an alert with all of the error messages (use join)
         // and then return from this function to prevent further processing 
-        if(errors.legnth >0 ) {
-           let errorMsg = errors.join('/n') 
+        if(errors.length >0 ) {
+           let errorMsg = errors.join('\n') //has a forward slash here
            alert(errorMsg)                      
-           return
+           return  
         } 
-        // homeownerNameInput.value = ''
-        // homeownerHouseNumberInput.value = ''
-        // homeownerStreetNameInput = ''
-        // homeOwnerZipInput.value = ''
-        // homeOwnerCityInput.value = ''
+        //this section is going to clear the form inputs one by one.
+        homeownerNameInput.value = ''
+        homeownerHouseNumberInput.value = ''
+        homeownerStreetNameInput = ''
+        homeOwnerZipInput.value = ''
+        homeOwnerCityInput.value = ''
 
         // TODO - If there are no errors, use a template string to display an order summary in the order summary paragraph
         let summary = `Your ${treeType} tree ordered is now placed placed for: 
-        ${name} Address: ${houseNumber} ${streetName}. 'Thank You for using Dan's Tree Order Form Service!'`
+        ${name} Address: ${houseNumber} ${streetName} ${city} Minnesota ${zipCode}. 'Thank You for using Dan's Tree Order Form Service!'`
         orderSummaryParagraph.innerHTML = summary
-        
+        //THIS IS AN END LINE SINGLE NOTE THAT IS DISPALAYED WHEN FORM IS COMPLETED WITH SUBMITT CLICK.
+        //FORM IS ALSO CLEARED ABOVE SO FORM VALUES ARE REMOVED READY FOR THE NEXT ORDER.:-)
     })
 
 
